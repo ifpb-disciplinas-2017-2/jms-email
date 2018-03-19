@@ -16,14 +16,15 @@ import javax.jms.Queue;
 @JMSDestinationDefinition(
         name = "java:global/jms/Fila",
         interfaceName = "javax.jms.Queue",
-        resourceAdapter = "jmsra")
+        resourceAdapter = "jmsra",
+        destinationName = "queue")
 @Stateless
 public class EnviarEmail {
 
     //"java:global/jms/Fila
-    @Resource(lookup = "jms/aulaQueue")
+//    @Resource(lookup = "jms/aulaQueue")
 //    @Resource(lookup = "jms/dac/Queue")
-//    @Resource(lookup = "java:global/jms/Fila")
+    @Resource(lookup = "java:global/jms/Fila")
     private Queue fila;
 
     @Inject

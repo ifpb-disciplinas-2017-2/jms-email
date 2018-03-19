@@ -17,6 +17,7 @@ public class EnviarEmailServlet extends HttpServlet {
 
     @Inject
     private LerEmail consumidor;
+    
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -35,7 +36,8 @@ public class EnviarEmailServlet extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
         }
-
+        
+       
     }
 
     @Override
